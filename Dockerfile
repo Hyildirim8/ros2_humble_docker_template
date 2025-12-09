@@ -13,7 +13,21 @@ RUN apt-get update && apt-get install -y \
     wget \
     curl \
     build-essential \
+    sudo \
     && rm -rf /var/lib/apt/lists/*
+
+# Host kullanıcısıyla eşleşen kullanıcı oluştur
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+ARG USERNAME=master
+
+# Grup ve kullanıcı oluştur
+RUN groupadd -g ${GROUP_ID} ${USERNAME} || true && \
+    useradd -l -u ${USER_ID} -g ${USERNAME} -m -s /bin/bash ${USERNAME} && \
+    echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Kullanıcıya geç
+USER ${USERNAME}
 
 # Çalışma dizinini oluştur
 WORKDIR /workspace
