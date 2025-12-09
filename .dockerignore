@@ -1,0 +1,8 @@
+workspace/build
+workspace/install
+workspace/log
+.git
+.gitignore
+*.pyc
+__pycache__
+.DS_Store
