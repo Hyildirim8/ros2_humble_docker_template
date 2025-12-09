@@ -194,3 +194,5 @@ ros2_humble_docker_template/
 - Container içinde yapılan değişiklikler `workspace` dışında container durdurulduğunda kaybolur.
 - Her yeni terminal oturumunda ortam değişkenlerini (`UID`, `GID`, `USER`) export etmeyi unutmayın.
 - Farklı bilgisayarlarda kullanmak için sadece projeyi klonlayın ve yukarıdaki adımları takip edin.
+
+colcon build --packages-select simple_py_pkg --symlink-install
