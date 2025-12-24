@@ -27,7 +27,10 @@ setup(
         'console_scripts': [
             "sample_node = simple_py_pkg.sample_node:main",
             "counter_node = simple_py_pkg.counter_node:main",
-            
+            "channel_node = simple_py_pkg.television:main",
+            "remote_controller_node = simple_py_pkg.remote_controller:main",
+            "add_two_ints_server = simple_py_pkg.add_two_ints_server:main",
+            "add_two_ints_client = simple_py_pkg.add_two_ints_client:main",
         ],
     },
 )
