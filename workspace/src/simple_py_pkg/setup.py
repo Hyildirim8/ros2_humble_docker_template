@@ -31,6 +31,8 @@ setup(
             "remote_controller_node = simple_py_pkg.remote_controller:main",
             "add_two_ints_server = simple_py_pkg.add_two_ints_server:main",
             "add_two_ints_client = simple_py_pkg.add_two_ints_client:main",
+            "component_status_publisher = simple_py_pkg.components_status_publisher:main",
+            "components_status_listener = simple_py_pkg.components_status_listener:main",
         ],
     },
 )
